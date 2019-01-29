@@ -8,5 +8,11 @@ module.exports = {
   transform: {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
-  }
+  },
+  collectCoverageFrom: [
+    '**/*.{js,vue}',
+    '!coverage/**',
+    '!dist/**',
+    '!*.config.js'
+  ]
 }
