@@ -36,5 +36,9 @@
     "nodemon": "^1.18.9",
     "prettier": "1.14.3",
     "vue-jest": "^3.0.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
