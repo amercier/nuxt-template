@@ -38,8 +38,8 @@
     "vue-jest": "^3.0.2"
   },
   "prettier": {
-    "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "all"
   },
   "eslintConfig": {
     "root": true,
