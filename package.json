@@ -10,7 +10,6 @@
     "lint": "if-ci run-p lint:* && if-not-ci run-s --continue-on-error lint:*",
     "lint:eslint": "if-ci run-p 'eslint --color' && if-not-ci run-p 'eslint --fix'",
     "lint:prettier": "if-ci run-s 'prettier --list-different' && if-not-ci run-s 'prettier --write'",
-    "precommit": "npm run lint",
     "test": "if-ci jest --colors --coverage && if-not-ci jest --watch --notify"
   },
   "dependencies": {
