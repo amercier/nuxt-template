@@ -16,7 +16,6 @@
     "nuxt": "^2.3.4"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^0.0.1",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.1",
@@ -44,24 +43,76 @@
   },
   "eslintConfig": {
     "root": true,
-    "settings": {
-      "import/resolver": "nuxt"
-    },
     "env": {
       "browser": true,
-      "node": true
+      "node": true,
+      "jest/globals": true
+    },
+    "plugins": [
+      "vue",
+      "jest",
+      "prettier"
+    ],
+    "extends": [
+      "standard",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:vue/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "settings": {
+      "import/resolver": "nuxt"
     },
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "extends": [
-      "@nuxtjs",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {}
+    "rules": {
+      "import/order": 2,
+      "import/first": 2,
+      "import/no-mutable-exports": 2,
+      "import/no-unresolved": 0,
+      "arrow-parens": [
+        2,
+        "as-needed"
+      ],
+      "generator-star-spacing": 0,
+      "no-debugger": 2,
+      "no-console": 2,
+      "prefer-const": [
+        2,
+        {
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": false
+        }
+      ],
+      "no-lonely-if": 2,
+      "curly": [
+        2,
+        "all"
+      ],
+      "require-await": 2,
+      "dot-notation": 2,
+      "no-var": 2,
+      "space-before-function-paren": [
+        2,
+        {
+          "anonymous": "always",
+          "named": "never"
+        }
+      ],
+      "vue/no-parsing-error": [
+        2,
+        {
+          "x-invalid-end-tag": false
+        }
+      ],
+      "vue/max-attributes-per-line": [
+        2,
+        {
+          "singleline": 5
+        }
+      ]
+    }
   },
   "babel": {
     "env": {
