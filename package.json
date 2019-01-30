@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test": "jest"
+    "test": "if-ci jest --colors --coverage && if-not-ci jest --watch --notify"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
@@ -30,6 +30,7 @@
     "eslint-plugin-jest": "^22.2.1",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-vue": "^5.0.0",
+    "if-ci": "^3.0.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.9",
     "prettier": "1.14.3",
