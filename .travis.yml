@@ -4,7 +4,7 @@ cache: yarn
 before_script:
   - yarn lint
 script:
-  - yarn test --coverage
+  - yarn test
 after_success:
   - yarn build # Ensure build do not fail
   - npx codecov
