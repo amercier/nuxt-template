@@ -11,26 +11,24 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
+    "consola": "^2.3.2",
     "cross-env": "^5.2.0",
     "koa": "^2.6.2",
     "nuxt": "^2.3.4"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^0.0.1",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^23.6.0",
     "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.1.0",
-    "eslint-config-standard": ">=12.0.0",
+    "eslint-import-resolver-nuxt": "amercier/eslint-import-resolver-nuxt#fix-at-sign-imports",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-import": ">=2.14.0",
-    "eslint-plugin-jest": ">=21.24.1",
-    "eslint-plugin-node": ">=7.0.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.2.1",
     "eslint-plugin-prettier": "2.6.2",
-    "eslint-plugin-promise": ">=4.0.1",
-    "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.0.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.9",
@@ -38,26 +36,34 @@
     "vue-jest": "^3.0.2"
   },
   "prettier": {
-    "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "all"
   },
   "eslintConfig": {
     "root": true,
     "env": {
       "browser": true,
-      "node": true
+      "node": true,
+      "jest/globals": true
+    },
+    "plugins": [
+      "vue",
+      "jest",
+      "prettier"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:vue/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "settings": {
+      "import/resolver": "nuxt"
     },
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "extends": [
-      "@nuxtjs",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {}
+    }
   },
   "babel": {
     "env": {
