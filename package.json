@@ -121,6 +121,9 @@
       "^.+\\.js$": "babel-jest",
       ".*\\.(vue)$": "vue-jest"
     },
+    "testPathIgnorePatterns": [
+      "<rootDir>/test/e2e/.*"
+    ],
     "collectCoverageFrom": [
       "**/*.{js,vue}",
       "!coverage/**",
