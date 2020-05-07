@@ -2958,6 +2958,11 @@ consola@^2.0.0-1, consola@^2.3.0, consola@^2.3.2:
     std-env "^2.2.1"
     string-width "^2.1.1"
 
+consola@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.12.0.tgz#ff4932a4503389a7fe2ba5a5a59634bc1d0569c9"
+  integrity sha512-xXVDntF8Rh6Yik44OZPb9Wy8vzv2WvKACMAY7NxIaZqfB0rEeQBfEtIh2lC1P2+Dby9zKirkHn8HHuKjRViZuQ==
+
 console-browserify@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-browserify/-/console-browserify-1.1.0.tgz#f0241c45730a9fc6323b206dbf38edc741d0bb10"
